@@ -397,3 +397,88 @@ span#deegres {
 #actions > ul > li > a > img {
   margin-right: 5px;
 }
+
+/* FORM */
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: greenyellow 1px solid;
+}
+#contact-form > h3 {
+  margin-top: 62px;
+  padding: 0;
+  color: #002868;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#contact-form > form {
+  width: 740px;
+  border-top: #eeeeee solid 1px;
+  border-bottom: #eeeeee solid 1px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 60px 27px 60px;
+}
+
+#contact-form input {
+  height: 46px;
+  border: 1px solid #b6b6b6;
+  border-radius: 4px;
+}
+
+#contact-form input[name="phone"] {
+  background: url("./images/icons/phone.svg") no-repeat scroll 16px 16px;
+  padding-left: 40px;
+}
+
+#contact-form input[name="email"] {
+  background: url("./images/icons/email.svg") no-repeat scroll 16px 16px;
+  padding-left: 40px;
+}
+
+#contact-form input + span {
+  margin-top: 15px;
+}
+
+#contact-form > form > span {
+  margin-bottom: 4px;
+}
+
+#contact-form textarea {
+  height: 120px;
+  border: 1px solid #b6b6b6;
+  border-radius: 4px;
+  resize: none;
+}
+#contact-form-controls {
+  margin-top: 21px;
+  margin-bottom: 55px;
+  display: flex;
+  justify-content: flex-end;
+  width: 740px;
+}
+
+#contact-form button {
+  position: relative;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  background: #bf0a30;
+  border-radius: 6px;
+  border: 1px solid white;
+  height: 50px;
+  width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#contact-form button > img {
+  position: absolute;
+  right: 13px;
+}
