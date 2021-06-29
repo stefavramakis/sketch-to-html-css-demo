@@ -236,3 +236,106 @@ span#deegres {
   position: absolute;
   padding: 20px 0 0 235px;
 }
+
+/*  census */
+
+#census {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("./images/bg-census.png") bottom center no-repeat;
+  background-size: cover;
+  height: 744px;
+  width: 100%;
+}
+
+#treelogo {
+  margin: 40px 0;
+}
+#census > h2 {
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 50px;
+  color: #bf0a30;
+}
+#census > section {
+  display: flex;
+  line-height: 25px;
+}
+
+#census-left {
+  margin-right: 60px;
+
+  max-width: 464px;
+}
+
+#census-left > h2 {
+  margin-bottom: 10px;
+}
+
+#census-left > h3 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+#census > section > #census-right {
+  max-width: 475px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#census-right > ul {
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: normal;
+  list-style-image: url("./images/icons/blue-caret.svg");
+}
+
+#census-right > ul > li + li {
+  margin-top: 10px;
+}
+#census-right > ul > li:nth-child(3) {
+  margin-top: 5px;
+}
+#census-right > ul > li:nth-child(4) {
+  margin-top: 0;
+}
+#census > section h2 {
+  color: #002868;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+#census > section span1 {
+  padding: 0 0 0 232px;
+  width: 464px;
+  height: 245px;
+}
+
+#census-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+#census-info > h3 {
+  margin: 0;
+  color: #bf0a30;
+  font-size: 18px;
+}
+
+#census-date {
+  color: #002868;
+  font-size: 34px;
+  margin-top: 5px;
+}
+
+#census-location {
+  color: #002868;
+  font-size: 18px;
+  margin-top: 9px;
+}
