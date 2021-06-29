@@ -1,74 +1,145 @@
 <!DOCTYPE html>
 <html>
-<head>
-   <link href="app.css" rel="stylesheet"/>
-</head>
-    <body>
-        <header>
-           <div class="container">
-            <div id="topbar">
-                <!-- Todo: Implemnent topbar -->
-                <span>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0.833336C4.91668 0.833336 0.833344 4.91667 0.833344 10C0.833344 15.0833 4.91668 19.1667 10 19.1667C15.0833 19.1667 19.1667 15.0833 19.1667 10C19.1667 4.91667 15.0833 0.833336 10 0.833336ZM10 17.5C5.83334 17.5 2.50001 14.1667 2.50001 10C2.50001 5.83334 5.83334 2.5 10 2.5C14.1667 2.5 17.5 5.83334 17.5 10C17.5 14.1667 14.1667 17.5 10 17.5ZM13.0833 13.0833C13.4167 12.75 13.4167 12.25 13.0833 11.9167L10.8333 9.66667V5C10.8333 4.5 10.5 4.16667 10 4.16667C9.50001 4.16667 9.16668 4.5 9.16668 5V10C9.16668 10.25 9.25001 10.4167 9.41668 10.5833L11.9167 13.0833C12.0833 13.25 12.25 13.3333 12.5 13.3333C12.75 13.3333 12.9167 13.25 13.0833 13.0833Z" fill="black"/>
-                        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0.833336C4.91668 0.833336 0.833344 4.91667 0.833344 10C0.833344 15.0833 4.91668 19.1667 10 19.1667C15.0833 19.1667 19.1667 15.0833 19.1667 10C19.1667 4.91667 15.0833 0.833336 10 0.833336ZM10 17.5C5.83334 17.5 2.50001 14.1667 2.50001 10C2.50001 5.83334 5.83334 2.5 10 2.5C14.1667 2.5 17.5 5.83334 17.5 10C17.5 14.1667 14.1667 17.5 10 17.5ZM13.0833 13.0833C13.4167 12.75 13.4167 12.25 13.0833 11.9167L10.8333 9.66667V5C10.8333 4.5 10.5 4.16667 10 4.16667C9.50001 4.16667 9.16668 4.5 9.16668 5V10C9.16668 10.25 9.25001 10.4167 9.41668 10.5833L11.9167 13.0833C12.0833 13.25 12.25 13.3333 12.5 13.3333C12.75 13.3333 12.9167 13.25 13.0833 13.0833Z" fill="white"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                        <rect width="20" height="20" fill="white"/>
-                        </g>
-                        </svg>
-                </span>
-                <div>
-                    <p id="location" datetime="" class="clocktext">ΑΡΚΑΔΙΑ</p>
-                    <p id="time" datetime="" class="clocktext">13:28</p>
+  <head>
+    <link href="app.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="topbar">
+          <div>
+            <div id="time-box">
+              <div id="clock-icon">
+                <img src="./images/hero/clock.svg" alt="clock" />
+              </div>
+              <div>
+                <h3 id="location">ΑΡΚΑΔΙΑ</h3>
+                <div class="widget-text">13:28</div>
+              </div>
+            </div>
+            <div id="weather-box">
+              <div id="weather-icon">
+                <img src="./images/hero/weather.svg" alt="weather" />
+              </div>
+              <div>
+                <h3 id="weather">ΚΑΤΑΙΓΙΔΑ</h3>
+                <div id="temperature" class="widget-text">
+                  <span id="deegres">12</span>
+                  <a id="unitc" href="#">°C</a>
+                  <a id="unitf" href="#">°F</a>
                 </div>
+              </div>
             </div>
-
-            <nav id="main">
-                <a href="#" id="logo"><img src="logo.svg" alt="Logo"></a>
-
-                <ul id="main-menu">
-                    <li><a href="#">Η ΟΜΟΣΠΟΝΔΙΑ</a> </li>
-                    <li><a href="#">ΑΡΚΑΔΩΝ ΕΡΓΑ</a> </li>
-                    <li><a href="#">ΕΠΩΝΥΜΟΙ ΑΡΚΑΔΕΣ</a> </li>
-                    <li><a href="#">ΝΕΑ - ΕΝΗΜΕΡΩΣΗ</a> </li>
-                    <li><a href="#">ΕΠΙΣΚΕΨΗ ΣΤΗΝ ΑΡΚΑΔΙΑ</a> </li>
-                    <li><a href="#">ΑΝΑΖΗΤΗΣΕΙΣ ΣΤΗΝ ΑΡΚΑΔΙΑ</a> </li>
-                    <li>
-                       <a href="#">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 3H4C2.3 3 1 4.3 1 6V18C1 19.7 2.3 21 4 21H20C21.7 21 23 19.7 23 18V6C23 4.3 21.7 3 20 3ZM4 5H20C20.4 5 20.7 5.2 20.9 5.6L12 11.8L3.1 5.6C3.3 5.2 3.6 5 4 5ZM3 18C3 18.6 3.4 19 4 19H20C20.6 19 21 18.6 21 18V7.9L12.6 13.8C12.4 13.9 12.2 14 12 14C11.8 14 11.6 13.9 11.4 13.8L3 7.9V18Z" fill="black"/>
-                            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="3" width="22" height="18">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 3H4C2.3 3 1 4.3 1 6V18C1 19.7 2.3 21 4 21H20C21.7 21 23 19.7 23 18V6C23 4.3 21.7 3 20 3ZM4 5H20C20.4 5 20.7 5.2 20.9 5.6L12 11.8L3.1 5.6C3.3 5.2 3.6 5 4 5ZM3 18C3 18.6 3.4 19 4 19H20C20.6 19 21 18.6 21 18V7.9L12.6 13.8C12.4 13.9 12.2 14 12 14C11.8 14 11.6 13.9 11.4 13.8L3 7.9V18Z" fill="white"/>
-                            </mask>
-                            <g mask="url(#mask0)">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V24H0V0Z" fill="#002868"/>
-                            </g>
-                            </svg>
-                       </a> 
-                    </li>
-                </ul>
-            </nav>
-            <div id="featured">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2214 0.000107481V8.7293H19.5107V4.48616H17.4535V6.60773H15.2786V2.12168H21.9428V10.9392H2.05716V2.12168H8.7215V6.60773H6.54647V4.48616H4.4893V8.7293H10.7786V0.000107481H0V10.9392V13.0608V24H10.7786V15.2708H4.4893V19.5137H6.54647V17.3922H8.7215V21.8784H2.05716V13.0608H21.9428V21.8784H15.2786V17.3922H17.4535V19.5137H19.5107V15.2708H13.2214V24H24V0.000107481H13.2214Z" fill="white"/>
-                    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2214 0.000107481V8.7293H19.5107V4.48616H17.4535V6.60773H15.2786V2.12168H21.9428V10.9392H2.05716V2.12168H8.7215V6.60773H6.54647V4.48616H4.4893V8.7293H10.7786V0.000107481H0V10.9392V13.0608V24H10.7786V15.2708H4.4893V19.5137H6.54647V17.3922H8.7215V21.8784H2.05716V13.0608H21.9428V21.8784H15.2786V17.3922H17.4535V19.5137H19.5107V15.2708H13.2214V24H24V0.000107481H13.2214Z" fill="white"/>
-                    </mask>
-                    <g mask="url(#mask0)">
-                    <rect width="24" height="24" fill="white"/>
-                    </g>
-                    </svg>
-                    
-                <h3>ΚΑΛΩΣ ΗΛΘΑΤΕ</h3>
-                <h2>Η αποστολή μας</h2>
-                <p>Ο Παναρκαδικής Ομοσπονδίας Αμερικής είναι μια πανεθνική μη κερδοσκοπικού αδελφό ελληνικό-αμερικανική οργάνωση τα μέλη της οποίας κατεβαίνουν από την περιοχή της Αρκαδίας στην Πελοπόννησο, στη νότια Ελλάδα …</p>
-                <a href="#">ΠΕΡΙΣΣΟΤΕΡΑ</a>
-            </div>
-           </div>
-        </header>
-    </body>
+          </div>
+          <div>
+            <img id="login" src="./images/hero/login.svg" alt="login" />
+            <a id="login-button" href="#">Εγγραφή / Σύνδεση</a>
+            <a id="lang" href="#">
+              <img src="./images/hero/language.svg" alt="language" />
+            </a>
+          </div>
+        </div>
+        <nav id="main">
+          <a href="#" id="logo"
+            ><img src="./images/hero/logo.svg" alt="Logo" />
+          </a>
+          <ul id="main-menu">
+            <li><a href="#">Η ΟΜΟΣΠΟΝΔΙΑ</a></li>
+            <li><a href="#">ΑΡΚΑΔΩΝ ΕΡΓΑ</a></li>
+            <li><a href="#">ΕΠΩΝΥΜΟΙ ΑΡΚΑΔΕΣ</a></li>
+            <li><a href="#">ΝΕΑ - ΕΝΗΜΕΡΩΣΗ</a></li>
+            <li><a href="#">ΕΠΙΣΚΕΨΗ ΣΤΗΝ ΑΡΚΑΔΙΑ</a></li>
+            <li><a href="#">ΑΝΑΖΗΤΗΣΕΙΣ ΣΤΗΝ ΑΡΚΑΔΙΑ</a></li>
+            <li>
+              <a href="#">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M20 3H4C2.3 3 1 4.3 1 6V18C1 19.7 2.3 21 4 21H20C21.7 21 23 19.7 23 18V6C23 4.3 21.7 3 20 3ZM4 5H20C20.4 5 20.7 5.2 20.9 5.6L12 11.8L3.1 5.6C3.3 5.2 3.6 5 4 5ZM3 18C3 18.6 3.4 19 4 19H20C20.6 19 21 18.6 21 18V7.9L12.6 13.8C12.4 13.9 12.2 14 12 14C11.8 14 11.6 13.9 11.4 13.8L3 7.9V18Z"
+                    fill="black"
+                  />
+                  <mask
+                    id="mask0"
+                    mask-type="alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="1"
+                    y="3"
+                    width="22"
+                    height="18"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M20 3H4C2.3 3 1 4.3 1 6V18C1 19.7 2.3 21 4 21H20C21.7 21 23 19.7 23 18V6C23 4.3 21.7 3 20 3ZM4 5H20C20.4 5 20.7 5.2 20.9 5.6L12 11.8L3.1 5.6C3.3 5.2 3.6 5 4 5ZM3 18C3 18.6 3.4 19 4 19H20C20.6 19 21 18.6 21 18V7.9L12.6 13.8C12.4 13.9 12.2 14 12 14C11.8 14 11.6 13.9 11.4 13.8L3 7.9V18Z"
+                      fill="white"
+                    />
+                  </mask>
+                  <g mask="url(#mask0)">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0 0H24V24H0V0Z"
+                      fill="#002868"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <img id="paf" src="./images/hero/PAF.svg" alt="paf" />
+        </nav>
+        <div id="featured">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.2214 0.000107481V8.7293H19.5107V4.48616H17.4535V6.60773H15.2786V2.12168H21.9428V10.9392H2.05716V2.12168H8.7215V6.60773H6.54647V4.48616H4.4893V8.7293H10.7786V0.000107481H0V10.9392V13.0608V24H10.7786V15.2708H4.4893V19.5137H6.54647V17.3922H8.7215V21.8784H2.05716V13.0608H21.9428V21.8784H15.2786V17.3922H17.4535V19.5137H19.5107V15.2708H13.2214V24H24V0.000107481H13.2214Z"
+              fill="white"
+            />
+            <mask
+              id="mask0"
+              mask-type="alpha"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="24"
+              height="24"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.2214 0.000107481V8.7293H19.5107V4.48616H17.4535V6.60773H15.2786V2.12168H21.9428V10.9392H2.05716V2.12168H8.7215V6.60773H6.54647V4.48616H4.4893V8.7293H10.7786V0.000107481H0V10.9392V13.0608V24H10.7786V15.2708H4.4893V19.5137H6.54647V17.3922H8.7215V21.8784H2.05716V13.0608H21.9428V21.8784H15.2786V17.3922H17.4535V19.5137H19.5107V15.2708H13.2214V24H24V0.000107481H13.2214Z"
+                fill="white"
+              />
+            </mask>
+            <g mask="url(#mask0)">
+              <rect width="24" height="24" fill="white" />
+            </g>
+          </svg>
+          <h3>ΚΑΛΩΣ ΗΛΘΑΤΕ</h3>
+          <h2>Η αποστολή μας</h2>
+          <p>
+            Ο Παναρκαδικής Ομοσπονδίας Αμερικής είναι μια πανεθνική μη
+            κερδοσκοπικού αδελφό ελληνικό-αμερικανική οργάνωση τα μέλη της
+            οποίας κατεβαίνουν από την περιοχή της Αρκαδίας στην Πελοπόννησο,
+            στη νότια Ελλάδα …
+          </p>
+          <a href="#">ΠΕΡΙΣΣΟΤΕΡΑ</a>
+        </div>
+      </div>
+    </header>
+  </body>
 </html>
-
-
